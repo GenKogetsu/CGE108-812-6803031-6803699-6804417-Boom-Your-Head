@@ -27,6 +27,8 @@ public sealed class InputManager : MonoBehaviour, IPauseWhenSceneAnimation
 
     private void Awake()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+
         if (_inputActions == null)
         {
             Debug.LogError("InputActionAsset ไม่ได้ถูกตั้งค่าใน Inspector");

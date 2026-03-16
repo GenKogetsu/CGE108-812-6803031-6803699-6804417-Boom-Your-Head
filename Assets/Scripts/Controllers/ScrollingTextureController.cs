@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(MeshRenderer))]
-public sealed class ScrollingTextureController : MonoBehaviour
+public sealed class ScrollingTextureController : Singleton<ScrollingTextureController>
 {
     [Header("Settings")]
     [SerializeField] private MeshRenderer _renderer;
