@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BombController
   _bombChannel: {fileID: 11400000, guid: 50aa77ce2976cfd4abbce7cfca91caed, type: 2}
+  _mapChannel: {fileID: 11400000, guid: fd18bf6ecf75d814d89e64e71aaab33a, type: 2}
   _poolKey: {fileID: 3939017888894637700}
   _rigidbody: {fileID: 4051471656876344614}
   _collider: {fileID: 3939017888894637701}

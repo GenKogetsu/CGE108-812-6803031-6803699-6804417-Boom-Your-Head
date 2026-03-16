@@ -10,6 +10,7 @@ public sealed class BombController : MonoBehaviour
 {
     [Header("Observer")]
     [SerializeField] private BombChannelSO _bombChannel;
+    [SerializeField] private MapChannelSO _mapChannel;
     [SerializeField] private GameObject _poolKey;
 
     [Header("Components")]
@@ -29,7 +30,6 @@ public sealed class BombController : MonoBehaviour
     private StatsController _ownerStats;
     private bool _onCriticalPhase;
 
-    // 🚀 ตัวแปรเสริมสำหรับ Smart Snapping
     private bool _isSmartSnapping;
     private Vector2 _targetSnapPos;
 
@@ -38,8 +38,6 @@ public sealed class BombController : MonoBehaviour
         _rigidbody.bodyType = RigidbodyType2D.Dynamic;
         _rigidbody.gravityScale = 0f;
         _rigidbody.freezeRotation = true;
-
-        // 🚀 [FIX] ทำให้ระเบิดเบาหวิว เพื่อไม่ให้มีแรงส่งไปผลักตัวละคร B
         _rigidbody.mass = 0.0001f;
         _rigidbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
     }
@@ -63,20 +61,15 @@ public sealed class BombController : MonoBehaviour
         {
             _animator.SetTrigger("ToCritical");
             _onCriticalPhase = true;
-
-            // 🚀 เริ่มคำนวณเป้าหมายล่วงหน้าเมื่อเข้าระยะใกล้ระเบิด
             CalculateSmartSnapTarget(timeLeft);
         }
 
-        // 🚀 ปรับความเร็วให้ค่อยๆ ไหลไปตรงกลางช่องเป้าหมายแบบเนียนๆ
         if (_isSmartSnapping && timeLeft > 0)
         {
-            // ปรับ Velocity ให้พอดีกับเวลาที่เหลือ เพื่อให้ถึงจุดกึ่งกลาง Int เป๊ะพอดี
             _rigidbody.linearVelocity = (_targetSnapPos - (Vector2)transform.position) / timeLeft;
         }
         else if (_rigidbody.linearVelocity.sqrMagnitude > 0.01f)
         {
-            // 🚀 ช่วยให้ระเบิดไหลตรงเลน (Align to Grid Axis) ตลอดเวลาที่เคลื่อนที่
             Vector2 currentPos = transform.position;
             Vector2 vel = _rigidbody.linearVelocity;
             if (Mathf.Abs(vel.x) > Mathf.Abs(vel.y))
@@ -91,41 +84,49 @@ public sealed class BombController : MonoBehaviour
     private void CalculateSmartSnapTarget(float timeLeft)
     {
         Vector2 vel = _rigidbody.linearVelocity;
-        if (vel.sqrMagnitude < 0.01f) return; // ไม่ได้เคลื่อนที่ ไม่ต้องคำนวณ
+        if (vel.sqrMagnitude < 0.01f) return;
 
         Vector2 current = transform.position;
-        Vector2 expected = current + (vel * timeLeft); // คาดการณ์จุดตก
+        Vector2 expected = current + (vel * timeLeft);
 
         int targetX = Mathf.RoundToInt(expected.x);
         int targetY = Mathf.RoundToInt(expected.y);
 
-        // 🚀 ดักไว้ไม่ให้ Snap กลับหลัง (ถ้าปัดเศษแล้วมันถอยหลัง ให้ปัดไปข้างหน้าแทน)
         if (vel.x > 0.1f && targetX < current.x) targetX = Mathf.CeilToInt(current.x);
         if (vel.x < -0.1f && targetX > current.x) targetX = Mathf.FloorToInt(current.x);
         if (vel.y > 0.1f && targetY < current.y) targetY = Mathf.CeilToInt(current.y);
         if (vel.y < -0.1f && targetY > current.y) targetY = Mathf.FloorToInt(current.y);
 
-        // ล็อคแกนที่ไม่ได้เคลื่อนที่ให้อยู่ตรงกลางเป๊ะๆ
         if (Mathf.Abs(vel.x) > Mathf.Abs(vel.y)) targetY = Mathf.RoundToInt(current.y);
         else targetX = Mathf.RoundToInt(current.x);
 
-        _targetSnapPos = new Vector2(targetX, targetY);
+        Vector2Int proposedTarget = new Vector2Int(targetX, targetY);
+
+        // ตรวจสอบแผนที่: ถ้าเป้าหมายที่จะ Snap ไปเป็นกำแพงหรือกล่องที่เดินทะลุไม่ได้
+        if (_mapChannel != null && (!_mapChannel.IsWalkable(proposedTarget) || _mapChannel.IsSolid(proposedTarget)))
+        {
+            // ยกเลิกการ Snap ไปข้างหน้า และบังคับให้ Snap ลงตำแหน่งปัจจุบันที่ปัดเศษแล้วแทน
+            _targetSnapPos = new Vector2(Mathf.Round(current.x), Mathf.Round(current.y));
+        }
+        else
+        {
+            _targetSnapPos = new Vector2(targetX, targetY);
+        }
+
         _isSmartSnapping = true;
     }
 
-    // 🚀 [FIX] เมื่อระเบิดที่กำลังวิ่งไปชนตัวละคร หรือชนกำแพง
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("LivingThings"))
         {
             _rigidbody.linearVelocity = Vector2.zero;
-            _isSmartSnapping = false; // ชนปุ๊บ ยกเลิกระบบไหลล่วงหน้าทันที ให้ไปใช้ Snap ปกติแทน
+            _isSmartSnapping = false;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        // 🚀 เมื่อตัวละครเดินพ้นระเบิด (รวมถึงตอนวางยัดตีน) ให้กลายเป็น Solid เพื่อปิดทาง
         if (other.CompareTag("Player") || other.gameObject.layer == LayerMask.NameToLayer("LivingThings"))
         {
             _collider.isTrigger = false;
@@ -139,10 +140,9 @@ public sealed class BombController : MonoBehaviour
         _radius = builder.Radius;
         _isExploded = false;
         _onCriticalPhase = false;
-        _isSmartSnapping = false; // เคลียร์สถานะด้วย
+        _isSmartSnapping = false;
         _lifeTime = 0f;
 
-        // 🚀 เริ่มต้นเป็น Trigger เพื่อให้วางยัดตีนได้ไม่ติดตัวละคร
         _collider.isTrigger = true;
 
         transform.position = new Vector3(gridPos.x, gridPos.y, 0f);
@@ -166,10 +166,16 @@ public sealed class BombController : MonoBehaviour
     {
         _rigidbody.linearVelocity = Vector2.zero;
 
-        // 🚀 ถ้าระบบ Smart Snap ทำงานอยู่ ให้ Snap ไปเป้าหมายข้างหน้าเลย
         Vector2 snappedPos = _isSmartSnapping ? _targetSnapPos : new Vector2(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y));
+        Vector2Int snapGrid = new Vector2Int(Mathf.RoundToInt(snappedPos.x), Mathf.RoundToInt(snappedPos.y));
+
+        // ตรวจสอบความปลอดภัยรอบสุดท้ายก่อนบังคับ Snap จริง
+        if (_mapChannel != null && (!_mapChannel.IsWalkable(snapGrid) || _mapChannel.IsSolid(snapGrid)))
+        {
+            snappedPos = new Vector2(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y));
+        }
 
         _rigidbody.MovePosition(snappedPos);
-        transform.position = new(snappedPos.x, snappedPos.y); // ชัวร์ 100% ว่าย้ายจริง
+        transform.position = new Vector3(snappedPos.x, snappedPos.y, transform.position.z);
     }
 }

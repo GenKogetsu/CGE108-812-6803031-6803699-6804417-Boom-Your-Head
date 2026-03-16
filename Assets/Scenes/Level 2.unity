@@ -2437,6 +2437,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 659608404}
     - target: {fileID: 5480118823380935668, guid: ff268244d74d0fb49b034cc96ad393ca, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480118823380935668, guid: ff268244d74d0fb49b034cc96ad393ca, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_ActionName
       value: 'Player/P1Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
       objectReference: {fileID: 0}

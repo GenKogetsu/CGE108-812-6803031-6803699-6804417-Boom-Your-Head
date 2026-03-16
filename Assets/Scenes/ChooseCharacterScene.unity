@@ -1121,7 +1121,7 @@ MonoBehaviour:
     m_ActionName: 'Multiplayer/P2Bomb[/Keyboard/rightShift]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
-  m_DefaultActionMap: SinglePlayer
+  m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &1960069479

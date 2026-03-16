@@ -3,6 +3,45 @@
     "name": "input",
     "maps": [
         {
+            "name": "Ui",
+            "id": "1fef1195-963b-489f-9cb5-4bd9c919f2e5",
+            "actions": [
+                {
+                    "name": "PressAnyKey",
+                    "type": "Button",
+                    "id": "934d9f77-c75a-481a-831c-aa09b26ac13d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a9693a15-57b3-4997-b8f0-767acd65af83",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressAnyKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "84315967-7339-4366-88cd-44f6d62d7e81",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressAnyKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
             "name": "SinglePlayer",
             "id": "df70fa95-8a34-4494-b137-73ab6b9c7d37",
             "actions": [
@@ -265,45 +304,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "P2Bomb",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Ui",
-            "id": "1fef1195-963b-489f-9cb5-4bd9c919f2e5",
-            "actions": [
-                {
-                    "name": "PressAnyKey",
-                    "type": "Button",
-                    "id": "934d9f77-c75a-481a-831c-aa09b26ac13d",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "a9693a15-57b3-4997-b8f0-767acd65af83",
-                    "path": "<Keyboard>/anyKey",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "PressAnyKey",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "84315967-7339-4366-88cd-44f6d62d7e81",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "PressAnyKey",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

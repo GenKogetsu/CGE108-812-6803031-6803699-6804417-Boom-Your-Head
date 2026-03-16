@@ -29,6 +29,7 @@ public sealed class InputMapSwitcher : MonoBehaviour
         _singlePlayerMap = _inputActions.FindActionMap(_singlePlayerMapName, true);
         _multiplayerMap = _inputActions.FindActionMap(_multiplayerMapName, true);
 
+        DisableAll();      // สำคัญ
         ApplyPreset();
     }
 
@@ -36,17 +37,17 @@ public sealed class InputMapSwitcher : MonoBehaviour
     {
         if (_sessionData == null) return;
 
+        DisableAll();      // ปิดทุก map ก่อน
+
         bool isSingle = _sessionData.PlayerCount == 1;
 
         if (isSingle)
         {
-            _multiplayerMap?.Disable();
-            _singlePlayerMap?.Enable();
+            _singlePlayerMap.Enable();
         }
         else
         {
-            _singlePlayerMap?.Disable();
-            _multiplayerMap?.Enable();
+            _multiplayerMap.Enable();
         }
 
         Debug.Log($"[InputMapSwitcher] Active Map : {(isSingle ? "SinglePlayer" : "Multiplayer")}");

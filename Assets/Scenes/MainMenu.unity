@@ -690,16 +690,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3065097777723734793, guid: b87526a86cc41b14ea3414cfb32f7a6b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1496084762}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b87526a86cc41b14ea3414cfb32f7a6b, type: 3}
---- !u!1 &586545554 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3065097777723734793, guid: b87526a86cc41b14ea3414cfb32f7a6b, type: 3}
-  m_PrefabInstance: {fileID: 586545553}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1164827986
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,28 +776,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8459053976999519708, guid: b87526a86cc41b14ea3414cfb32f7a6b, type: 3}
   m_PrefabInstance: {fileID: 586545553}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586545554}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b2b2342dab81904f8994084336d68cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuController
---- !u!114 &1496084762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586545554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5735f0905767c49a99fa40f5e7045e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InputMapSwitcher
-  _inputActions: {fileID: -944628639613478452, guid: 5e438cfce4dd3384e9381fa7bdce7439, type: 3}
-  _sessionData: {fileID: 11400000, guid: bf78820d6bce32b479e86553296a7af5, type: 2}
-  _singlePlayerMapName: SinglePlayer
-  _multiplayerMapName: Multiplayer
 --- !u!1001 &1693853496
 PrefabInstance:
   m_ObjectHideFlags: 0

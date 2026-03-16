@@ -8,7 +8,6 @@ using UnityEngine;
 
 public sealed class BotCommander : MonoBehaviour, IPathfindable, IPauseWhenSceneAnimation
 {
-    #region Variables
     [Header("Observer & Data")]
     [SerializeField] private MapChannelSO _mapChannel;
     [SerializeField] private GameSessionDataSO _sessionData;
@@ -19,7 +18,6 @@ public sealed class BotCommander : MonoBehaviour, IPathfindable, IPauseWhenScene
     [SerializeField] private float _thinkInterval = 0.12f;
 
     [Range(1f, 10f)]
-    [Tooltip("หน่วงเวลาเฉพาะการวางแผน (หลบระเบิดจะไวเท่าเดิม)")]
     [SerializeField] private float _thinkDelayOffset = 1.0f;
 
     [Header("Radar Layers")]
@@ -44,15 +42,12 @@ public sealed class BotCommander : MonoBehaviour, IPathfindable, IPauseWhenScene
     private const float UNREACHABLE_TIMEOUT = 2.0f;
     private const int STUCK_LIMIT = 45;
     private const float REPLAN_COOLDOWN_SECONDS = 1.0f;
-    #endregion
 
     public Vector2Int CurrentGridPosition => Vector2Int.zero;
     public IMapProvider MapProvider => null;
     Vector2Int IPathfindable.GetNextPath(Vector2Int target) => PathfindAbility<BotCommander>.Execute(this, target);
 
     private bool _isSceneLoading = true;
-
-    #region Unity Lifecycle
 
     private void OnEnable()
     {
@@ -121,11 +116,7 @@ public sealed class BotCommander : MonoBehaviour, IPathfindable, IPauseWhenScene
         }
     }
 
-    #endregion
-
     private Vector2Int WorldToGrid(Vector2 worldPos) => new Vector2Int(Mathf.RoundToInt(worldPos.x), Mathf.RoundToInt(worldPos.y));
-
-    #region Core Logic
 
     public void OnSceneLoading(LoadSceneEvent eventData)
     {
@@ -210,12 +201,40 @@ public sealed class BotCommander : MonoBehaviour, IPathfindable, IPauseWhenScene
                 continue;
             }
 
-            Vector2Int nearestBox = ExecuteFindNearestBox(myGridPos, 30);
-            brain.CurrentFullPath = GetFullPath(myGridPos, nearestBox.x != -9999 ? nearestBox : myGridPos, true, safeRadius);
+            Vector2Int nearestEnemyPos = new Vector2Int(-9999, -9999);
+            float minDistToEnemy = float.MaxValue;
 
-            if (brain.CurrentFullPath.Count > 0 && !_mapChannel.IsWalkable(brain.CurrentFullPath[0]))
+            foreach (var other in _controlledStatsMap)
             {
-                if (Vector2Int.Distance(myGridPos, brain.CurrentFullPath[0]) <= 1.1f)
+                if (other.Key == botId || other.Value == null || other.Value.CurrentHp <= 0) continue;
+                Vector2Int otherPos = WorldToGrid(other.Value.transform.position);
+                float dist = Vector2.Distance(myGridPos, otherPos);
+                if (dist < minDistToEnemy)
+                {
+                    minDistToEnemy = dist;
+                    nearestEnemyPos = otherPos;
+                }
+            }
+
+            Vector2Int nearestBox = ExecuteFindNearestBox(myGridPos, 30);
+            Vector2Int targetPos = nearestBox;
+
+            if (nearestEnemyPos.x != -9999)
+            {
+                if (nearestBox.x == -9999 || minDistToEnemy < Vector2Int.Distance(myGridPos, nearestBox))
+                {
+                    targetPos = nearestEnemyPos;
+                }
+            }
+
+            brain.CurrentFullPath = GetFullPath(myGridPos, targetPos.x != -9999 ? targetPos : myGridPos, true, safeRadius);
+
+            bool isNearEnemy = minDistToEnemy <= 1.5f;
+            bool isPathBlocked = brain.CurrentFullPath.Count > 0 && !_mapChannel.IsWalkable(brain.CurrentFullPath[0]);
+
+            if (isNearEnemy || isPathBlocked)
+            {
+                if (isNearEnemy || Vector2Int.Distance(myGridPos, brain.CurrentFullPath[0]) <= 1.1f)
                 {
                     ExecuteRequestBomb(botId, stats);
                     brain.CurrentFullPath.Clear();
@@ -363,10 +382,6 @@ public sealed class BotCommander : MonoBehaviour, IPathfindable, IPauseWhenScene
         _botInputChannel.RaiseEvent(botId, ActionType.Move, new MoveInputEvent(finalDir.normalized));
     }
 
-    #endregion
-
-    #region Helper & Bug Fixes
-
     private void ExecuteRefreshTarget()
     {
         if (_sessionData == null || _characterRegistry == null) return;
@@ -497,6 +512,4 @@ public sealed class BotCommander : MonoBehaviour, IPathfindable, IPauseWhenScene
         }
         return new Vector2Int(-9999, -9999);
     }
-
-    #endregion
 }
