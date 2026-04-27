@@ -12,6 +12,8 @@ public class GameDataManager : Singleton<GameDataManager>
 
         GameSessionData.ResetScripts();
         MapData.ResetScripts();
+
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void Start()

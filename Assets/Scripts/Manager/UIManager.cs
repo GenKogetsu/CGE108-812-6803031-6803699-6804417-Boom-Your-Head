@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using TMPro;
+﻿using TMPro;
 using UnityEngine.UI;
 using System;
 
@@ -8,50 +7,43 @@ namespace BombGame.UI
     public sealed class UIManager : MonoBehaviour
     {
         [Header("Ryuwen Stats Reference")]
-        [SerializeField] private StatsController _ryuwenStats;
-        [SerializeField] private GameObject _ryuwenOut;
-        [SerializeField] private TextMeshProUGUI _ryuwenHp, _ryuwenBomb, _ryuwenSpeed, _ryuwenRange;
+        [SerializeField] private StatsController _stats;
+        [SerializeField] private Animator _animator;
 
-        [Header("Edigan Stats Reference")]
-        [SerializeField] private StatsController _ediganStats;
-        [SerializeField] private GameObject _ediganOut;
-        [SerializeField] private TextMeshProUGUI _ediganHp, _ediganBomb, _ediganSpeed, _ediganRange;
-
-        [Header("Baboon Stats Reference")]
-        [SerializeField] private StatsController _baboonStats;
-        [SerializeField] private GameObject _baboonOut;
-        [SerializeField] private TextMeshProUGUI _baboonHp, _baboonBomb, _baboonSpeed, _baboonRange;
-
-        [Header("Terbi Stats Reference")]
-        [SerializeField] private StatsController _terbiStats;
-        [SerializeField] private GameObject _terbiOut;
-        [SerializeField] private TextMeshProUGUI _terbiHp, _terbiBomb, _terbiSpeed, _terbiRange;
-
-        private void Update()
+        private void OnEnable()
         {
-            UpdatePlayerUI(_ryuwenStats, _ryuwenOut, _ryuwenHp, _ryuwenBomb, _ryuwenSpeed, _ryuwenRange);
-            UpdatePlayerUI(_ediganStats, _ediganOut, _ediganHp, _ediganBomb, _ediganSpeed, _ediganRange);
-            UpdatePlayerUI(_baboonStats, _baboonOut, _baboonHp, _baboonBomb, _baboonSpeed, _baboonRange);
-            UpdatePlayerUI(_terbiStats, _terbiOut, _terbiHp, _terbiBomb, _terbiSpeed, _terbiRange);
+            _stats.OnHpChange += OnHpChange;
+            _stats.OnBombChange += OnBombChange;
+            _stats.OnSpeedChange += OnSpeedChange;
+            _stats.OnExpoleChange += OnExpoleChange;
         }
 
-        private void UpdatePlayerUI(StatsController stats, GameObject outImg, TextMeshProUGUI hp, TextMeshProUGUI bomb, TextMeshProUGUI speed, TextMeshProUGUI range)
+        private void OnDisable()
         {
-            if (stats == null) return;
+            _stats.OnHpChange -= OnHpChange;
+            _stats.OnBombChange -= OnBombChange;
+            _stats.OnSpeedChange -= OnSpeedChange;
+            _stats.OnExpoleChange -= OnExpoleChange;
+        }
 
-            if (hp) hp.text = stats.CurrentHp.ToString();
-            if (bomb) bomb.text = stats.BombsRemaining.ToString();
+        private void OnHpChange(int hp)
+        {
+            _animator.SetInteger("Hp",hp);
+        }
 
-            int speedVal = (int)Mathf.Floor(stats.CurrentSpeed);
-            if (speed) speed.text = speedVal.ToString();
+        private void OnBombChange(int bomb)
+        {
+            _animator.SetInteger("Bomb", bomb);
+        }
 
-            if (range) range.text = stats.CurrentExplosionRange.ToString();
+        private void OnSpeedChange(int speed)
+        {
+            _animator.SetInteger("Speed", speed);
+        }
 
-            if (outImg)
-            {
-                bool isDead = stats.CurrentHp <= 0;
-                if (outImg.activeSelf != isDead) outImg.SetActive(isDead);
-            }
+        private void OnExpoleChange(int expole)
+        {
+            _animator.SetInteger("Expole", expole);
         }
     }
 }

@@ -12,7 +12,10 @@ public class MainMenuController : MonoBehaviour
     [ReadOnly]
     [SerializeField] private Animator _animator;
 
-    private bool _isStarting = false;
+    private bool _isStarting;
+    private bool _isInMainMenu;
+
+    public float _waitTime = 2f;
 
     private void OnValidate()
     {
@@ -21,12 +24,23 @@ public class MainMenuController : MonoBehaviour
 
     public void OnPressAnyKey(InputAction.CallbackContext context)
     {
-        if (!context.started || _isStarting) return;
+        if (!context.started || _isStarting || _isInMainMenu) return;
+        _isInMainMenu = true;
         ChangedState("ToMainMenu");
     }
 
+    public void OnESC(InputAction.CallbackContext context)
+    {
+        if (!context.started) return;
+        ChangedState("ToMainMenu");
+    }
+
+
     public void OnClickStartButton() => ChangedState("ToPlayeMode");
     public void OnClickCreditButton() => ChangedState("ToCredit");
+    public void OnClickOptionButton() => ChangedState("ToOption");
+
+
 
     public void OnClickExitButton()
     {
@@ -38,22 +52,24 @@ public class MainMenuController : MonoBehaviour
     public void OnClickSiglePlayer()
     {
         if (_sessionData != null) _sessionData.PlayerCount = 1;
-        StartGameTransition();
+        if (!_isStarting) StartCoroutine(StartGameTransition());
     }
 
     // 🚀 เล่นสองคน: เซ็ตค่าเป็น 2
     public void OnClickMultiPlayer()
     {
         if (_sessionData != null) _sessionData.PlayerCount = 2;
-        StartGameTransition();
+        if (!_isStarting) StartCoroutine(StartGameTransition());
     }
 
-    private void StartGameTransition()
+    private IEnumerator StartGameTransition()
     {
-        if (_isStarting) return;
+        if (_isStarting) yield break;
         _isStarting = true;
         ResetAllBools();
-        SceneEffectController.Instance.LoadSceneAndPlayEffect("Tip");
+
+        yield return new WaitForSeconds(_waitTime);
+        SceneEffectController.Instance.LoadSceneAndPlayEffect("IQ Bot");
     }
 
     private void ChangedState(string state)
@@ -63,6 +79,7 @@ public class MainMenuController : MonoBehaviour
         if (state == "ToMainMenu") _animator.SetBool("ToMainMenu", true);
         if (state == "ToPlayeMode") _animator.SetBool("ToPlayeMode", true);
         if (state == "ToCredit") _animator.SetBool("ToCredit", true);
+        if (state == "ToOption") _animator.SetBool("ToOption", true);
     }
 
     private void ResetAllBools()
@@ -70,5 +87,6 @@ public class MainMenuController : MonoBehaviour
         _animator.SetBool("ToMainMenu", false);
         _animator.SetBool("ToPlayeMode", false);
         _animator.SetBool("ToCredit", false);
+        _animator.SetBool("ToOption", false);
     }
 }

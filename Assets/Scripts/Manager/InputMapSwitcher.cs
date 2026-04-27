@@ -31,6 +31,7 @@ public sealed class InputMapSwitcher : MonoBehaviour
 
         DisableAll();      // สำคัญ
         ApplyPreset();
+
     }
 
     public void ApplyPreset()

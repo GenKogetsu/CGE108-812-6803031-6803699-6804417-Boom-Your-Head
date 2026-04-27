@@ -21,5 +21,7 @@ public class Tip : MonoBehaviour
             _singel.gameObject.SetActive(false);
             _muti.gameObject.SetActive(true);
         }
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

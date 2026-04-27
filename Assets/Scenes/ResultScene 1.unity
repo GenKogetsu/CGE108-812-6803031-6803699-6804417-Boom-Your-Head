@@ -670,7 +670,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 290}
-  m_SizeDelta: {x: 238.33524, y: 410.15625}
+  m_SizeDelta: {x: 234.4281, y: 473.43753}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1170069688
 MonoBehaviour:
@@ -692,7 +692,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 901270663227825982, guid: b1eb096d57951f94faf5ec44981372df, type: 3}
+  m_Sprite: {fileID: -2004915175650442554, guid: 610d9c8e1bef93c4cbcc9cb523c7fe5a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -839,25 +839,25 @@ MonoBehaviour:
   SpriteDatabase:
   - CharacterName: Ryuwen
     RankPortraits:
-    - {fileID: -6680809523660575598, guid: b1eb096d57951f94faf5ec44981372df, type: 3}
+    - {fileID: 7305174634031210743, guid: 610d9c8e1bef93c4cbcc9cb523c7fe5a, type: 3}
     - {fileID: 901270663227825982, guid: b1eb096d57951f94faf5ec44981372df, type: 3}
     - {fileID: 901270663227825982, guid: b1eb096d57951f94faf5ec44981372df, type: 3}
     - {fileID: -5537852722795018027, guid: b1eb096d57951f94faf5ec44981372df, type: 3}
   - CharacterName: Edigan
     RankPortraits:
-    - {fileID: 4592593138349292375, guid: b1eb096d57951f94faf5ec44981372df, type: 3}
+    - {fileID: -4554212476682504276, guid: 610d9c8e1bef93c4cbcc9cb523c7fe5a, type: 3}
     - {fileID: -4597440414308726043, guid: b1eb096d57951f94faf5ec44981372df, type: 3}
     - {fileID: -4597440414308726043, guid: b1eb096d57951f94faf5ec44981372df, type: 3}
     - {fileID: 389023258648649543, guid: b1eb096d57951f94faf5ec44981372df, type: 3}
   - CharacterName: Baboon
     RankPortraits:
-    - {fileID: -3383962621784051092, guid: b1eb096d57951f94faf5ec44981372df, type: 3}
+    - {fileID: -2004915175650442554, guid: 610d9c8e1bef93c4cbcc9cb523c7fe5a, type: 3}
     - {fileID: -3832483572808857589, guid: b1eb096d57951f94faf5ec44981372df, type: 3}
     - {fileID: -3832483572808857589, guid: b1eb096d57951f94faf5ec44981372df, type: 3}
     - {fileID: 8403717337663395641, guid: b1eb096d57951f94faf5ec44981372df, type: 3}
   - CharacterName: Terbi
     RankPortraits:
-    - {fileID: -1434075405508234638, guid: b1eb096d57951f94faf5ec44981372df, type: 3}
+    - {fileID: 509040070825626520, guid: 610d9c8e1bef93c4cbcc9cb523c7fe5a, type: 3}
     - {fileID: 4222943307302653120, guid: b1eb096d57951f94faf5ec44981372df, type: 3}
     - {fileID: 4222943307302653120, guid: b1eb096d57951f94faf5ec44981372df, type: 3}
     - {fileID: -6526204257526325290, guid: b1eb096d57951f94faf5ec44981372df, type: 3}
@@ -875,7 +875,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SimpleTimerLoader
   _delaySeconds: 5
   _firstScene: Level 2
-  _secondScene: MainMenu
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

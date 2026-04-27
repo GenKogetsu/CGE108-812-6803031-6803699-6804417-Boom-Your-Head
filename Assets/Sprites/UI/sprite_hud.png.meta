@@ -1,0 +1,705 @@
+fileFormatVersion: 2
+guid: 97335515dbf168848aeaa61287ab7e29
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8344752056358355428
+    second: sprite_hud_0
+  - first:
+      213: 3106052204739302380
+    second: sprite_hud_1
+  - first:
+      213: -869345577982160054
+    second: sprite_hud_2
+  - first:
+      213: 6112939893672331710
+    second: sprite_hud_3
+  - first:
+      213: -6050539397931585107
+    second: sprite_hud_4
+  - first:
+      213: 6252128095180822376
+    second: sprite_hud_5
+  - first:
+      213: 5934966880311119155
+    second: sprite_hud_6
+  - first:
+      213: -1451966040220918795
+    second: sprite_hud_7
+  - first:
+      213: 3189373564587493989
+    second: sprite_hud_8
+  - first:
+      213: -1451597257072047167
+    second: sprite_hud_9
+  - first:
+      213: -8708544085835574287
+    second: sprite_hud_10
+  - first:
+      213: -6077621993408130758
+    second: sprite_hud_11
+  - first:
+      213: -6985581325339945136
+    second: sprite_hud_12
+  - first:
+      213: 5613370035699223171
+    second: sprite_hud_13
+  - first:
+      213: -9221879965352659503
+    second: sprite_hud_14
+  - first:
+      213: 1860545641751905916
+    second: sprite_hud_15
+  - first:
+      213: -124930027983060653
+    second: sprite_hud_16
+  - first:
+      213: 7758533888562593587
+    second: sprite_hud_17
+  - first:
+      213: -7356440273004398384
+    second: sprite_hud_18
+  - first:
+      213: 6233261365078979821
+    second: sprite_hud_19
+  - first:
+      213: 3250863105799164467
+    second: sprite_hud_20
+  - first:
+      213: -4574534808964514772
+    second: sprite_hud_21
+  - first:
+      213: 392717046744598949
+    second: sprite_hud_22
+  - first:
+      213: -8324293995087807180
+    second: sprite_hud_23
+  - first:
+      213: -4562513620200701119
+    second: sprite_hud_24
+  - first:
+      213: -7406808246899044576
+    second: sprite_hud_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Out
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 1063
+        width: 225
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce31e4d060aea1b20800000000000000
+      internalID: 3106052204739302380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackgroundHUD
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 113
+        width: 681
+        height: 1216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4311558dc67fe3f0800000000000000
+      internalID: -869345577982160054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp-Bar
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 1236
+        width: 340
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb947af027685d450800000000000000
+      internalID: 6112939893672331710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb-Bar
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 1175
+        width: 340
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da138c6897a280ca0800000000000000
+      internalID: -6050539397931585107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Speed-Bar
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 1117
+        width: 340
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8671e7b906504c650800000000000000
+      internalID: 6252128095180822376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Expole-Bar
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 1059
+        width: 340
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33d07aeceec3d5250800000000000000
+      internalID: 5934966880311119155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp-Start
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 951
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fb93ba449499dbe0800000000000000
+      internalID: -1451966040220918795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp-Mid
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 951
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a4245eb5ee24c20800000000000000
+      internalID: 3189373564587493989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hp-Max
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 951
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb0a4f4cf3eadbe0800000000000000
+      internalID: -1451597257072047167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb-Start
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 892
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f311f43b49052780800000000000000
+      internalID: -8708544085835574287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb-Mid
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 892
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a319ec36ff2f7aba0800000000000000
+      internalID: -6077621993408130758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb-Max
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 892
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0579289bbca3e0f90800000000000000
+      internalID: -6985581325339945136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Speed-Start
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 833
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38a8caa7e42b6ed40800000000000000
+      internalID: 5613370035699223171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Speed-Mid
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 833
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d5fcd7f70d450080800000000000000
+      internalID: -9221879965352659503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Speed-Max
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 833
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c760601576cf1d910800000000000000
+      internalID: 1860545641751905916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explotion-Start
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 774
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3514a4c2dc8244ef0800000000000000
+      internalID: -124930027983060653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explotion-Mid
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 774
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f7a951779dbab60800000000000000
+      internalID: 7758533888562593587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explotion-Max
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 774
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d8f13c3c8ca8e990800000000000000
+      internalID: -7356440273004398384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edigan
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 414
+        width: 239
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a9c374c216337500800000000000000
+      internalID: 392717046744598949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Baboon
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 414
+        width: 239
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43dbfd827ba2a7c80800000000000000
+      internalID: -8324293995087807180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ryuwen
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 121
+        width: 239
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1434e012902bea0c0800000000000000
+      internalID: -4562513620200701119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terbi
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 119
+        width: 239
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02f0624742bb53990800000000000000
+      internalID: -7406808246899044576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f063080cdf340a04c958362a446d98e7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Baboon: -8324293995087807180
+      BackgroundHUD: -869345577982160054
+      Bomb-Bar: -6050539397931585107
+      Bomb-Max: -6985581325339945136
+      Bomb-Mid: -6077621993408130758
+      Bomb-Start: -8708544085835574287
+      Edigan: 392717046744598949
+      Explotion-Max: -7356440273004398384
+      Explotion-Mid: 7758533888562593587
+      Explotion-Start: -124930027983060653
+      Expole-Bar: 5934966880311119155
+      Hp-Bar: 6112939893672331710
+      Hp-Max: -1451597257072047167
+      Hp-Mid: 3189373564587493989
+      Hp-Start: -1451966040220918795
+      Out: 3106052204739302380
+      Ryuwen: -4562513620200701119
+      Speed-Bar: 6252128095180822376
+      Speed-Max: 1860545641751905916
+      Speed-Mid: -9221879965352659503
+      Speed-Start: 5613370035699223171
+      Terbi: -7406808246899044576
+      sprite_hud_0: -8344752056358355428
+      sprite_hud_19: 6233261365078979821
+      sprite_hud_20: 3250863105799164467
+      sprite_hud_21: -4574534808964514772
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

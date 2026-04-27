@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 2bf814415b53a5c43a62a0b28042a184
   - enabled: 1
+    path: Assets/Scenes/IQ Bot.unity
+    guid: d142ce49457262b44804229f020485a6
+  - enabled: 1
     path: Assets/Scenes/Tip.unity
     guid: 4fd9eb9feeafd7e48b2878b3e7fab509
   - enabled: 1

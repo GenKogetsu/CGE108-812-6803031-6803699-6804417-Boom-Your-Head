@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: 7a81a9dc25a63fe4a8efdf27013c70f4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3714749902468068080
+    second: sprite_hudv2_0
+  - first:
+      213: -8821963677942016020
+    second: sprite_hudv2_1
+  - first:
+      213: 7896361225440632507
+    second: sprite_hudv2_2
+  - first:
+      213: 4481155126692804982
+    second: sprite_hudv2_3
+  - first:
+      213: -7471216926440082405
+    second: sprite_hudv2_4
+  - first:
+      213: 4002008050687157133
+    second: sprite_hudv2_5
+  - first:
+      213: 7797380158265431762
+    second: sprite_hudv2_6
+  - first:
+      213: -738792303712152106
+    second: sprite_hudv2_7
+  - first:
+      213: 2189791663621994906
+    second: sprite_hudv2_8
+  - first:
+      213: -4917621511829289099
+    second: sprite_hudv2_9
+  - first:
+      213: 1466981426292256429
+    second: sprite_hudv2_10
+  - first:
+      213: 4950997369477557002
+    second: sprite_hudv2_11
+  - first:
+      213: 1759560546695551508
+    second: sprite_hudv2_12
+  - first:
+      213: -4703359564479113832
+    second: sprite_hudv2_13
+  - first:
+      213: 8892598166912283136
+    second: sprite_hudv2_14
+  - first:
+      213: -3675620836211496441
+    second: sprite_hudv2_15
+  - first:
+      213: -5047364018153918207
+    second: sprite_hudv2_16
+  - first:
+      213: -7797264838040694688
+    second: sprite_hudv2_17
+  - first:
+      213: -2200335747011546638
+    second: sprite_hudv2_18
+  - first:
+      213: 8977768898957997186
+    second: sprite_hudv2_19
+  - first:
+      213: -2861414542209312159
+    second: sprite_hudv2_20
+  - first:
+      213: -4036172891832935362
+    second: sprite_hudv2_21
+  - first:
+      213: 847796580010647121
+    second: sprite_hudv2_22
+  - first:
+      213: 4452132903697744067
+    second: sprite_hudv2_23
+  - first:
+      213: 2038488644396255535
+    second: sprite_hudv2_24
+  - first:
+      213: 4171935855494060163
+    second: sprite_hudv2_25
+  - first:
+      213: 5661804058647810647
+    second: sprite_hudv2_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_hudv2_0
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 1379
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01d49f135ae827cc0800000000000000
+      internalID: -3714749902468068080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_1
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 1379
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce71ed296c6129580800000000000000
+      internalID: -8821963677942016020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 1063
+        width: 225
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbe9e84a2b2859d60800000000000000
+      internalID: 7896361225440632507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_3
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 17
+        width: 681
+        height: 1312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 679f1f578d2403e30800000000000000
+      internalID: 4481155126692804982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_4
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 1236
+        width: 340
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1437a32ac7e05890800000000000000
+      internalID: -7471216926440082405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_5
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 1177
+        width: 340
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8326795e1df98730800000000000000
+      internalID: 4002008050687157133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_6
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 1118
+        width: 340
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d6171011fbd53c60800000000000000
+      internalID: 7797380158265431762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_7
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 1059
+        width: 340
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d5d17660584fb5f0800000000000000
+      internalID: -738792303712152106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_8
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 951
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99fc428ae3b36e10800000000000000
+      internalID: 2189791663621994906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_9
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 951
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57788972a4911cbb0800000000000000
+      internalID: -4917621511829289099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_10
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 951
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daeee36b5d3cb5410800000000000000
+      internalID: 1466981426292256429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_11
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 892
+        width: 106
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0b6a9340e975b440800000000000000
+      internalID: 4950997369477557002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_12
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 892
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a9492aef63b6810800000000000000
+      internalID: 1759560546695551508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_13
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 892
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8955944456f4abeb0800000000000000
+      internalID: -4703359564479113832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_14
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 833
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 002b815faead86b70800000000000000
+      internalID: 8892598166912283136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_15
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 833
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70ae690e2529dfcc0800000000000000
+      internalID: -3675620836211496441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_16
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 833
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 101f8d5ea2924f9b0800000000000000
+      internalID: -5047364018153918207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_17
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 774
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 060d0f401fc8ac390800000000000000
+      internalID: -7797264838040694688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_18
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 774
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f178c4cb46d671e0800000000000000
+      internalID: -2200335747011546638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_19
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 774
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 284f0f15f31779c70800000000000000
+      internalID: 8977768898957997186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_20
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 713
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16a1a7062a63a48d0800000000000000
+      internalID: -2861414542209312159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_21
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 713
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3c9c32b322acf7c0800000000000000
+      internalID: -4036172891832935362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_22
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 713
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e53596f7af3cb00800000000000000
+      internalID: 847796580010647121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_23
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 414
+        width: 239
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c08bb9994729cd30800000000000000
+      internalID: 4452132903697744067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_24
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 414
+        width: 239
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2908e72f9a2a4c10800000000000000
+      internalID: 2038488644396255535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_25
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 121
+        width: 239
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38850748e81b5e930800000000000000
+      internalID: 4171935855494060163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_hudv2_26
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 119
+        width: 239
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75251973bc4c29e40800000000000000
+      internalID: 5661804058647810647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_hudv2_0: -3714749902468068080
+      sprite_hudv2_1: -8821963677942016020
+      sprite_hudv2_10: 1466981426292256429
+      sprite_hudv2_11: 4950997369477557002
+      sprite_hudv2_12: 1759560546695551508
+      sprite_hudv2_13: -4703359564479113832
+      sprite_hudv2_14: 8892598166912283136
+      sprite_hudv2_15: -3675620836211496441
+      sprite_hudv2_16: -5047364018153918207
+      sprite_hudv2_17: -7797264838040694688
+      sprite_hudv2_18: -2200335747011546638
+      sprite_hudv2_19: 8977768898957997186
+      sprite_hudv2_2: 7896361225440632507
+      sprite_hudv2_20: -2861414542209312159
+      sprite_hudv2_21: -4036172891832935362
+      sprite_hudv2_22: 847796580010647121
+      sprite_hudv2_23: 4452132903697744067
+      sprite_hudv2_24: 2038488644396255535
+      sprite_hudv2_25: 4171935855494060163
+      sprite_hudv2_26: 5661804058647810647
+      sprite_hudv2_3: 4481155126692804982
+      sprite_hudv2_4: -7471216926440082405
+      sprite_hudv2_5: 4002008050687157133
+      sprite_hudv2_6: 7797380158265431762
+      sprite_hudv2_7: -738792303712152106
+      sprite_hudv2_8: 2189791663621994906
+      sprite_hudv2_9: -4917621511829289099
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

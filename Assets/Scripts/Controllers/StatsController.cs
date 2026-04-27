@@ -2,6 +2,7 @@
 using NaughtyAttributes;
 using Genoverrei.DesignPattern;
 using Genoverrei.Libary;
+using System;
 
 /// <summary>
 /// <para> (TH) : ตัวจัดการค่าสถานะของตัวละคร รวมถึงระบบพลังชีวิต การรับดาเมจ สถานะอมตะชั่วคราว และการรีเซ็ตค่าสถานะ </para>
@@ -31,13 +32,28 @@ public sealed class StatsController : MonoBehaviour, ITakeDamageable
 
     [Header("Runtime Stats")]
     [ReadOnly][SerializeField] private bool _isInvincible;
-    [ReadOnly][SerializeField] private int _currentHp;
-    [ReadOnly][SerializeField] private int _currentAtk;
-    [ReadOnly][SerializeField] private float _currentSpeed;
-    [ReadOnly][SerializeField] private int _currentBombAmount;
-    [ReadOnly][SerializeField] private int _currentExplosionRange;
+
+    // แก้ไข: เปลี่ยนกลับเป็นตัวแปรธรรมดาเพื่อป้องกัน StackOverflow
+    [MinValue(0), MaxValue(10)]
+    private int _currentHp;
+    
+    [MinValue(0), MaxValue(10)]
+    private int _currentAtk;
+    
+    [MinValue(0), MaxValue(10)]
+    private int _currentSpeed;
+
+    [MinValue(0), MaxValue(10)]
+    private int _currentBombAmount;
+
+    [MinValue(0), MaxValue(10)]
+    private int _currentExplosionRange;
     [ReadOnly] public int _bombsRemaining;
 
+    public Action<int> OnHpChange;
+    public Action<int> OnBombChange;
+    public Action<int> OnSpeedChange;
+    public Action<int> OnExpoleChange;
     #endregion //Variable
 
     #region ITakeDamageable Properties
@@ -64,30 +80,43 @@ public sealed class StatsController : MonoBehaviour, ITakeDamageable
         get => _currentHp;
         private set
         {
-            _currentHp = Mathf.Max(0, value);
+            _currentHp = Mathf.Min(10, value);
             OnHpChanged();
             if (_currentHp <= 0) OnDeath();
             BroadcastStatsUpdate(); // 🚀 ส่งสัญญาณเมื่อเลือดเปลี่ยน
+            OnHpChange?.Invoke(_currentHp); // 🚀 ย้าย Invoke มาไว้ตรงนี้
         }
     }
 
-    // 🚀 เพิ่มการส่งสัญญาณเมื่อค่าสถานะอื่นเปลี่ยน เพื่อให้ UI อัปเดตทันที
-    public float CurrentSpeed
+    public int CurrentSpeed
     {
         get => _currentSpeed;
-        set { _currentSpeed = Mathf.Max(0, value); BroadcastStatsUpdate(); }
+        set
+        {
+            _currentSpeed = Mathf.Min(10, value);
+            BroadcastStatsUpdate();
+            OnSpeedChange?.Invoke(_currentSpeed); // 🚀 ย้าย Invoke มาไว้ตรงนี้
+        }
     }
 
     public int CurrentBombAmount
     {
         get => _currentBombAmount;
-        set { _currentBombAmount = Mathf.Max(0, value); BroadcastStatsUpdate(); }
+        set
+        {
+            _currentBombAmount = Mathf.Min(10, value);
+        }
     }
 
     public int CurrentExplosionRange
     {
         get => _currentExplosionRange;
-        set { _currentExplosionRange = Mathf.Max(0, value); BroadcastStatsUpdate(); }
+        set
+        {
+            _currentExplosionRange = Mathf.Min(10, value);
+            BroadcastStatsUpdate();
+            OnExpoleChange?.Invoke(_currentExplosionRange); // 🚀 ย้าย Invoke มาไว้ตรงนี้
+        }
     }
 
     public int CurrentAtk
@@ -99,13 +128,17 @@ public sealed class StatsController : MonoBehaviour, ITakeDamageable
     public int BombsRemaining
     {
         get => _bombsRemaining;
-        set => _bombsRemaining = Mathf.Clamp(value, 0, _currentBombAmount);
+        set 
+        {
+            _bombsRemaining = Mathf.Clamp(value, 0, _currentBombAmount); 
+            BroadcastStatsUpdate();
+            OnBombChange?.Invoke(_bombsRemaining);
+        }
     }
 
     #endregion //Properties
 
     #region Unity Lifecycle
-
 #if UNITY_EDITOR
     private void OnValidate()
     {
@@ -119,7 +152,7 @@ public sealed class StatsController : MonoBehaviour, ITakeDamageable
 
     private void Awake() => SyncData();
 
-    #endregion //Unity Lifecycle
+#endregion //Unity Lifecycle
 
     #region Public Methods
 
@@ -129,7 +162,7 @@ public sealed class StatsController : MonoBehaviour, ITakeDamageable
         _livingName = _statsData.livingName;
         _currentHp = _statsData.baseHp;
         _currentAtk = _statsData.baseAtk;
-        _currentSpeed = _statsData.baseSpeed;
+        _currentSpeed = (int)_statsData.baseSpeed;
         _currentBombAmount = _statsData.baseBombAmount;
         _currentExplosionRange = _statsData.baseExplosionRange;
         _bombsRemaining = _currentBombAmount;
@@ -221,9 +254,9 @@ public sealed class StatsController : MonoBehaviour, ITakeDamageable
 
     private void OnHpChanged()
     {
-#if UNITY_EDITOR
+        #if UNITY_EDITOR
         Debug.Log($"<b><color=#FF5252>[Stats]</color></b> {name} HP: <color=#81C784>{_currentHp}</color>");
-#endif
+        #endif
         if (_characterAnimator != null) _characterAnimator.SetInteger("Hp", _currentHp);
     }
 
